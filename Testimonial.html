@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="styles.javaScript"></script>
+</head>
+<body>
+     <!--Testimonial-->
+    <section id="testimonial">
+        <div class="title-text">
+            <p>TESTIMONIAL</p>
+            <h1>What Client Says</h1>
+        </div>
+        <div class="testimonial-row">
+            <div class="testimonial-col">
+                <div class="user">
+                    <img src="img/mn..jpg" style="height: 30px;">
+                <div class="user-info"> 
+                    <h5><font style="font-size: 11px;">DR. DASSANA</font></h5>
+                    <small><i><font style="color: blue;">@Excellence trenz</font></i></small>
+                </div>  
+                </div>
+                <p>
+                Thank you mr. Specificity, this are the best parts that I have ever use since I started repairing computers,this your pairs have brought to me many customers including those from abroad that I met online but due to how credible my repairs and good parts are the trusted me and i want to say "Your parts our joy"
+                </p>
+            </div>
+            <div class="testimonial-col">
+                <div class="user">
+                    <img src="img/two.jpg" style="height: 30px;">
+                <div class="user-info"> 
+                    <h5><font style="font-size: 11px;">DR. AZUMAH</font></h5>
+                    <small><font style="color: blue;"><i>@Champion hub</i></font></small>
+                </div>  
+                </div>
+                <p>
+                Thank you mr. Specificity, since I started repairing computers,this your pairs have brought to me many customers including those from abroad that I met online but due to how credible my repairs and good parts are the trusted me and i want to say "Your parts our joy"
+                </p>
+            </div>
+            <div class="testimonial-col">
+                <div class="user">
+                    <img src="img/one.jpeg" style="height: 30px;">
+                <div class="user-info"> 
+                    <h5><font style="font-size: 11px;">DR. ABDULLAH</font></h5>
+                    <small><font style="color: blue;"><i>@Web studio</i></font></small>  
+                </div>
+                </div>
+                <p>
+                Thank you mr. Specificity, this is the best parts that I have ever use since I started repairing computers,this your pairs have brought to me many customers including those from abroad that I met online but due to how credible my repairs and good parts are the trusted me and i want to say "Your parts our joy"
+                </p>
+            </div>
+        </div>
+
+
+        <div id="sideNave">
+            <nav>
+                 <ul class="menu" id="menu">
+                     <li><a href="HOME.HTML"><font  face="arial black" color="white" size="2";">HOME</font></a></li>
+                     <li><a href="FEATURES.HTML"><font  face="arial black" color="white" size="2";">FEATURES</font></a></li>
+                     <li><a href="PRODUCT.HTML"><font  face="arial black" color="white" size="2";">PRODUCT</font></a></li>
+                     <li><a href="JOIN US.HTML"><font  face="arial black" color="white" size="2";">JOIN US</U></font></a></li>
+                     <li><a href="TESTIMONIAL.HTML"><font  face="arial black" color="white" size="2";">TESTIMONIAL</font></a></li>
+                     <li><a href="CONTACT.HTML"><font  face="arial black" color="white" size="2";">CONTACT</font></a></li>
+                 </ul>
+            </nav>
+         </div>
+         <div id="menuBtn">
+            <img src="img/FOOL.gif" id="menu">
+         </div>
+    </section>
+        <script>
+            // Side navigation toggle
+            var menuBtn = document.getElementById("menuBtn");
+            var sideNave = document.getElementById("sideNave");
+            var menu = document.getElementById("menu");
+    
+            sideNave.style.right = "-250px";
+    
+            menuBtn.onclick = function() {
+                if (sideNave.style.right == "-250px") {
+                    sideNave.style.right = "0";
+                    menu.src = "img/images.jpeg";
+                } else {
+                    sideNave.style.right = "-250px";
+                    menu.src = "img/menu.jpeg";
+                }
+            };
+    
+            // Carousel functionality
+            const carouselImages = document.getElementById("carouselImages");
+            const prevBtn = document.getElementById("prevBtn");
+            const nextBtn = document.getElementById("nextBtn");
+    
+            let currentIndex = 0;
+    
+            function updateCarousel() {
+                const imageWidth = carouselImages.children[0].clientWidth;
+                carouselImages.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+            }
+    
+            nextBtn.onclick = function() {
+                if (currentIndex < carouselImages.children.length - 1) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                updateCarousel();
+            };
+    
+            prevBtn.onclick = function() {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = carouselImages.children.length - 1;
+                }
+                updateCarousel();
+            };
+    
+            // Auto-slide functionality
+            setInterval(() => {
+                if (currentIndex < carouselImages.children.length - 1) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+                updateCarousel();
+            }, 3000); // Change slide every 3 seconds
+    
+            window.addEventListener("resize", updateCarousel);
+        </script>
+
+</body>
+</html>

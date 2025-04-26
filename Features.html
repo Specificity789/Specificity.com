@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="styles.javaScript"></script>
+</head>
+<body>
+    <!--Features-->
+    <section id="feature">
+        <div class="title-text">
+            <p>FEATURES</p>
+            <h1>Why Choose Us</h1>
+        </div>
+        <div class="feature-box">
+            <div class="features">
+                <h1>Experienced Staff</h1>
+                <div class="features-desc">
+                    <div class="feature-icon"></div>
+                    <div class="feature-text">
+                        <p>✍️Transforming ideas into master piece.</p>
+                    </div>
+                </div>
+                <h1>Pre Order Online</h1>
+                <div class="features-desc">
+                    <div class="feature-icon"></div>
+                    <div class="feature-text">
+                        <p>✍️Designing with precision, delivering with pride.</p>
+                    </div>
+                </div>
+                <h1>Affordable Products</h1>
+                <div class="features-desc">
+                    <div class="feature-icon"></div>
+                    <div class="feature-text">
+                        <p>✍️Elevating brands through creative excellence.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="features-img">
+                <img src="img/two.jpg" alt="Image showcasing our best dealer services.">
+            </div>
+        </div>
+    </section>
+    
+    <div id="sideNave">
+        <nav>
+            <ul class="menu" id="menu">
+                <li><a href="HOME.HTML" style="font-family: 'Arial Black'; color: white; font-size: 14px;">HOME</a></li>
+                <li><a href="FEATURES.HTML" style="font-family: 'Arial Black'; color: white; font-size: 14px;">FEATURES</a></li>
+                <li><a href="PRODUCT.HTML" style="font-family: 'Arial Black'; color: white; font-size: 14px;">PRODUCT</a></li>
+                <li><a href="JOIN US.HTML" style="font-family: 'Arial Black'; color: white; font-size: 14px;">JOIN US</a></li>
+                <li><a href="TESTIMONIAL.HTML" style="font-family: 'Arial Black'; color: white; font-size: 14px;">TESTIMONIAL</a></li>
+                <li><a href="CONTACT.HTML" style="font-family: 'Arial Black'; color: white; font-size: 14px;">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+
+      <div id="sideNave">
+        <nav>
+             <ul class="menu" id="menu">
+                 <li><a href="HOME.HTML"><font  face="arial black" color="white" size="2";">HOME</font></a></li>
+                 <li><a href="FEATURES.HTML"><font  face="arial black" color="white" size="2";">FEATURES</font></a></li>
+                 <li><a href="PRODUCT.HTML"><font  face="arial black" color="white" size="2";">PRODUCT</font></a></li>
+                 <li><a href="JOIN US.HTML"><font  face="arial black" color="white" size="2";">JOIN US</font></a></li>
+                 <li><a href="TESTIMONIAL.HTML"><font  face="arial black" color="white" size="2";">TESTIMONIAL</font></a></li>
+                 <li><a href="CONTACT.HTML"><font  face="arial black" color="white" size="2";">CONTACT</font></a></li>
+             </ul>
+        </nav>
+     </div>
+     <div id="menuBtn">
+        <img src="img/FOOL.gif" id="menu">
+     </div>
+     
+      <script>
+        var menuBtn = document.getElementById("menuBtn")
+        var sideNave = document.getElementById("sideNave")
+        var menu = document.getElementById("menu")
+
+        sideNave.style.right = "-250px" 
+
+        menuBtn.onclick = function(){
+            if(sideNave.style.right == "-250px"){
+                sideNave.style.right = "0";
+                menu.src ="img/images.jpeg"; 
+            }
+            else{
+                sideNave.style.right = "-250px"
+                menu.src ="img/menu.jpeg";
+            }
+        }
+        </script>
+
+</body>
+</html>
